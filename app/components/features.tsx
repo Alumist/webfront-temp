@@ -1,18 +1,6 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-
-const tabs = document.querySelectorAll('.tab');
-const panels = document.querySelectorAll('.panel');
-
-tabs.forEach((tab) => tab.addEventListener('click', onTabClick));
-
-function onTabClick() {
-  tabs.forEach((tabs) => {
-    tabs.classList.remove('border-b-4', 'border-blue-400');
-  });
-}
 
 function Features() {
   return (
