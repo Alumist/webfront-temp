@@ -23,11 +23,7 @@ function Features() {
         panel.classList.add('hidden');
       });
       // show the panel that matches the tab
-      e.target.children[0].classList.add(
-        'border-b-4',
-        'border-blue-400',
-        'md:border-b-0'
-      );
+      e.target.classList.add('border-b-4', 'border-blue-400');
     }
   }, []);
   //   // tabs.forEach((tab) => {
