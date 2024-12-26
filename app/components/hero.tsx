@@ -11,7 +11,7 @@ function Hero() {
             A Happy Face created by Grok
           </h1>
           <p className='max-w-md mx-auto text-lg text-center text-gray-400 lg:text-2xl lg:text-left lg:mt-0 lg:mx-0'>
-            A Happy Place, needs a Happy Face. Grok is a happy face that will
+            A Happy Place, needs a Happy Face. Grok, created these images, to
             make you smile.
           </p>
           {/* buttons */}
