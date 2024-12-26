@@ -35,7 +35,7 @@ function Hero() {
 
         {/* img */}
         <div className='relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2'>
-        <div className="bg-hero"></div>
+          <div className='bg-hero'></div>
           <Image
             src='/images/company.jpg'
             alt='Grok'
