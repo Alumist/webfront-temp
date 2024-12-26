@@ -1,5 +1,18 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+
+tabs.forEach((tab) => tab.addEventListener('click', onTabClick));
+
+function onTabClick() {
+  tabs.forEach((tabs) => {
+    tabs.classList.remove('border-b-4', 'border-blue-400');
+  });
+}
 
 function Features() {
   return (
@@ -85,7 +98,7 @@ function Features() {
             </div>
 
             {/* 2 pan */}
-            <div className='flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-1'>
+            <div className='flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-2'>
               {/* img */}
               <div className='flex justify-center md:w-1/2'>
                 <Image
@@ -117,7 +130,7 @@ function Features() {
             </div>
 
             {/* 3 pan */}
-            <div className='flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-1'>
+            <div className='flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-3'>
               {/* img */}
               <div className='flex justify-center md:w-1/2'>
                 <Image
