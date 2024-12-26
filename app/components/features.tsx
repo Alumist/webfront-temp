@@ -7,31 +7,53 @@ import { useEffect } from 'react';
 function Features() {
   useEffect(() => {
     const tabs = document.querySelectorAll('.tab');
-
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const target = tab.getAttribute('data-target');
-        document.querySelectorAll('.panel').forEach((panel) => {
-          panel.classList.add('hidden');
-        });
-        const targetPanel = document.querySelector(`.${target}`);
-        if (targetPanel) {
-          targetPanel.classList.remove('hidden');
-        }
-        tab.children[0].classList.add(
+    const panels = document.querySelectorAll('.panel');
+    // gets rid of the border when you click on a tab
+    tabs.forEach((tab) => tab.addEventListener('click', onTabClick));
+    function onTabClick(e: any) {
+      tabs.forEach((tab) => {
+        tab.children[0].classList.remove(
           'border-b-4',
           'border-blue-400',
           'md:border-b-0'
         );
       });
-    });
-
-    return () => {
-      tabs.forEach((tab) => {
-        tab.removeEventListener('click', () => {});
+      // hide all panels
+      panels.forEach((panel) => {
+        panel.classList.add('hidden');
       });
-    };
+      // show the panel that matches the tab
+      e.target.children[0].classList.add(
+        'border-b-4',
+        'border-blue-400',
+        'md:border-b-0'
+      );
+    }
   }, []);
+  //   // tabs.forEach((tab) => {
+  //   //   tab.addEventListener('click', () => {
+  //   //     const target = tab.getAttribute('data-target');
+  //   //     document.querySelectorAll('.panel').forEach((panel) => {
+  //   //       panel.classList.add('hidden');
+  //   //     });
+  //   //     const targetPanel = document.querySelector(`.${target}`);
+  //   //     if (targetPanel) {
+  //   //       targetPanel.classList.remove('hidden');
+  //   //     }
+  //   //     tab.children[0].classList.add(
+  //   //       'border-b-4',
+  //   //       'border-blue-400',
+  //   //       'md:border-b-0'
+  //   //     );
+  //   //   });
+  //   });
+
+  //   return () => {
+  //     tabs.forEach((tab) => {
+  //       tab.removeEventListener('click', () => {});
+  //     });
+  //   };
+  // }, []);
 
   return (
     <>
