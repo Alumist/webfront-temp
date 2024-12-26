@@ -24,32 +24,13 @@ function Features() {
       });
       // show the panel that matches the tab
       e.target.classList.add('border-b-4', 'border-blue-400');
+      const classString = e.target.getAttribute('data-target');
+      document
+        .getElementById('panels')
+        ?.getElementsByClassName(classString)[0]
+        ?.classList.remove('hidden');
     }
   }, []);
-  //   // tabs.forEach((tab) => {
-  //   //   tab.addEventListener('click', () => {
-  //   //     const target = tab.getAttribute('data-target');
-  //   //     document.querySelectorAll('.panel').forEach((panel) => {
-  //   //       panel.classList.add('hidden');
-  //   //     });
-  //   //     const targetPanel = document.querySelector(`.${target}`);
-  //   //     if (targetPanel) {
-  //   //       targetPanel.classList.remove('hidden');
-  //   //     }
-  //   //     tab.children[0].classList.add(
-  //   //       'border-b-4',
-  //   //       'border-blue-400',
-  //   //       'md:border-b-0'
-  //   //     );
-  //   //   });
-  //   });
-
-  //   return () => {
-  //     tabs.forEach((tab) => {
-  //       tab.removeEventListener('click', () => {});
-  //     });
-  //   };
-  // }, []);
 
   return (
     <>
