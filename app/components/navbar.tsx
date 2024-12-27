@@ -37,7 +37,7 @@ function NavBar() {
             target='_blank'
             className='py-2 px-6 tracking-widest bg-gray-400 rounded-lg hover:text-gray-800 hover:bg-gray-200'
           >
-            Portfoilo
+            Portfolio
           </Link>
         </div>
       </div>

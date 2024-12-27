@@ -133,7 +133,7 @@ function Features() {
                 </h3>
                 <p className='max-w-md text-center text-gray-600 md:text-left'>
                   This is a simple business plan that can be done in 15 minutes.
-                  As 'easy' as a drawn stick figure, with a very little detail.
+                  As 'easy' as a drawn stick figure, with very little detail.
                 </p>
                 <div className='mx-auto md:mx-0'>
                   <Link
@@ -164,7 +164,7 @@ function Features() {
                   Difficult Plan
                 </h3>
                 <p className='max-w-md text-center text-gray-600 md:text-left'>
-                  This is a Difficult business plan that can be done in a 30
+                  This is a Difficult business plan that can be done in 30
                   minutes. As hard as a drawn stick figure, with details.
                 </p>
                 <div className='mx-auto md:mx-0'>
