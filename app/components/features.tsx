@@ -81,7 +81,7 @@ function Features() {
             </div>
           </div>
           {/* panels */}
-          <section id='panels' className='container mx-auto'>
+          <div id='panels' className='container mx-auto'>
             {/* first pan */}
             <div className='flex flex-col py-5 md:flex-row md:space-x-7 panel panel-1'>
               {/* img */}
@@ -177,7 +177,7 @@ function Features() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </section>
     </>
