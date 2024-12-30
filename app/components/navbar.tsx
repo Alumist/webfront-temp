@@ -4,10 +4,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HamBurger from './button';
 import Menu from './menu';
-import { useEffect } from 'react';
-
+import { use, useEffect } from 'react';
 
 function NavBar() {
+  useEffect(() => {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    // toggle the menu
+    btn?.addEventListener('click', navToggle);
+    function navToggle() {
+      btn?.classList.toggle('open');
+      menu?.classList.toggle('flex');
+      menu?.classList.toggle('hidden');
+    }
+  }, []);
+
   return (
     <nav className='container relative mx-auto p-6'>
       {/* flex splits items to the sides... just-between margintop/bottom-6*/}

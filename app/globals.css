@@ -50,6 +50,14 @@
   background: #000;
 }
 
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0);
+  position: fixed;
+  top: 90px;
+  right: 25px;
+}
+
 .open .hamburger-top {
   transform: rotate(45deg) translateY(6px) translateX(6px);
   background: #fff;
