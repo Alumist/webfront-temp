@@ -1,18 +1,25 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import HamBurger from './button';
+import Menu from './menu';
+import { useEffect } from 'react';
+
+
 function NavBar() {
   return (
     <nav className='container relative mx-auto p-6'>
       {/* flex splits items to the sides... just-between margintop/bottom-6*/}
       <div className='flex items-center justify-between space-x-20 my-6'>
         {/* logo */}
-        <div className='z-30 mx-auto lg:mx-0'>
+        <div className='z-10 lg:mx-0'>
           <Image
             src='/images/happyface-grok.jpg'
             alt='Logo'
             width={150}
             height={150}
-            className='rounded-full'
+            className='md:rounded-lg rounded-md'
           />
         </div>
         {/* menu */}
@@ -40,7 +47,9 @@ function NavBar() {
             Portfolio
           </Link>
         </div>
+        <HamBurger />
       </div>
+      <Menu />
     </nav>
   );
 }
